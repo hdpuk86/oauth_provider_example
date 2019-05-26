@@ -324,6 +324,10 @@ Doorkeeper.configure do
   # skip_authorization do |resource_owner, client|
   #   client.superapp? or resource_owner.admin?
   # end
+  skip_authorization do
+    # allow all client apps to be "trusted"
+    true
+  end
 
   # WWW-Authenticate Realm (default "Doorkeeper").
   #
